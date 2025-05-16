@@ -1,27 +1,29 @@
 import React, { use } from 'react'
 import { useState } from 'react'
+import {nanoid} from 'nanoid'
 
-const Create = (props) => {
-  const  info = props.info
+function Create(props) {
+  const info = props.info
   const setInfo = props.setInfo
 
   const [task, setTask] = useState("")
+
+  const createTodo = (e) => {
+    e.preventDefault()
+    const newData = {
+      id: nanoid(),
+      task: task,
+      completed: false
+    }
+    setInfo([...info, newData])
+    setTask("")
+  }
+
+
   return (
     <div>
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        const newData = {
-          // id: Math.floor(Math.random() * 1000),
-          task: task,
-          status: false
-        }
-        // let copyTodo=[...task]
-        // copyTodo.push(newData)
-        // setTask(copyTodo)
-        setInfo([...info, newData])
-        setTask("")
-      }}>
-        <input type="text" placeholder='task' onChange={(e)=>{setTask(e.target.value)}} value={task} />
+      <form onSubmit={(e) => { createTodo(e) } }>
+        <input type="text" placeholder='task' onChange={(e) => { setTask(e.target.value) } } value={task} />
         <br />
         <br />
         <button type="submit">Create</button>

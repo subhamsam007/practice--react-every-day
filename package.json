@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "id": "^0.0.0",
+    "nano": "^10.1.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
