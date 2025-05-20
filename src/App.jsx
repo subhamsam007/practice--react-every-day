@@ -11,7 +11,7 @@ const App = () => {
   ])
   
   return (
-    <div style={{ padding: '20px',backgroundColor: 'black', height: '100vh',color: 'white' }}>
+    <div className="p-5 bg-black h-screen text-white">
       <h1>user  registration </h1>
       <hr />
       <br />
