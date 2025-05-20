@@ -11,12 +11,8 @@ const App = () => {
   ])
   
   return (
-    <div className="p-5 bg-black h-screen text-white">
-      <h1>user  registration </h1>
-      <hr />
-      <br />
+    <div className="w-screen flex  bg-gray-500 h-screen text-white">
       <Create info={info} setInfo={setInfo} />
-      <hr />
       <Read info={info} setInfo={setInfo} />
     </div>
   )
