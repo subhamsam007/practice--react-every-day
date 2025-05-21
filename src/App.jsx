@@ -11,7 +11,7 @@ const App = () => {
   ])
   
   return (
-    <div className="w-screen flex  bg-gray-500 h-screen text-white">
+    <div className="">
       <Create info={info} setInfo={setInfo} />
       <Read info={info} setInfo={setInfo} />
     </div>
