@@ -1,33 +1,32 @@
 import React from 'react'
 
 const Read = (props) => {
-  const info = props.info
-  const setInfo = props.setInfo
+  const task = props.task
+  const setTask = props.setTask
 
-  const deletetask = (id) => {
-    const dedata = info.filter((task) => {
-      return task.id !== id
-    })
-    setInfo(dedata)
+  const deleteTask = (data) => {
+    const newTask = task.filter((abc) => abc.id !== data)
+    setTask(newTask)
   }
 
-  const renderuserr = info.map((task, index) => {
+
+  const renderUser = task.map((user,index) => {
     return (
       <li key={index}>
-        {task.task}
-        <button onClick={() => deletetask(task.id)}>
-          delete
-        </button>
+        {user.title}
+        <br />
+        <button onClick={() => deleteTask(user.id)}>Delete</button>
       </li>
-    );
+    )
   })
-
   return (
-    <>
+    <div>
+      <h3 className='text-4xl text-pink-500'>pending</h3>
       <ul>
-        {renderuserr}
+        {renderUser}
       </ul>
-    </>
+    </div>
   )
 }
+
 export default Read

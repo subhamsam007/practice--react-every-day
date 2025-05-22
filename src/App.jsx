@@ -1,21 +1,19 @@
+import React from 'react'
 import Create from './Components/Create'
-import { useState } from 'react'
 import Read from './Components/Read'
+import { useState } from 'react'
 
 const App = () => {
-  const [info, setInfo] = useState([
-    // { id: 1, task: "Task 1", status: false },
-    // { id: 2, task: "Task 2", status: false },
-    // { id: 3, task: "Task 3", status: false },
-    
+
+  const [task,setTask] = useState([
   ])
-  
   return (
-    <div className="">
-      <Create info={info} setInfo={setInfo} />
-      <Read info={info} setInfo={setInfo} />
+    <div className='bg-gray-700 h-screen flex  text-white'>
+      <Create task={task} setTask={setTask} />
+      <Read task={task} setTask={setTask} />
     </div>
   )
 }
 
 export default App
+
