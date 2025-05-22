@@ -11,7 +11,7 @@ const App = () => {
   ])
   
   return (
-    <div className="">
+    <div className="bg-gray-700 h-screen flex justify-around ">
       <Create info={info} setInfo={setInfo} />
       <Read info={info} setInfo={setInfo} />
     </div>
